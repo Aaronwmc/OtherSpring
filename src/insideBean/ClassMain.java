@@ -1,15 +1,18 @@
 package insideBean;
 
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.AbstractApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.beans.factory.support.AbstractBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
+import org.springframework.core.io.ClassPathResource;
 
+import beanFactory.InitHelloSpring;
+
+@SuppressWarnings("deprecation")
 public class ClassMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		AbstractApplicationContext context=new ClassPathXmlApplicationContext("insideBean/insideBean.xml");
-		TextEditor edt=(TextEditor) context.getBean("outerBean");
-		//edt.spellCheck();
+		AbstractBeanFactory factory = new XmlBeanFactory(new ClassPathResource("insideBean/insideBean.xml"));
+		TextEditor edt=(TextEditor) factory.getBean("outerBean");
+		edt.spellCheck();
 	}
 }

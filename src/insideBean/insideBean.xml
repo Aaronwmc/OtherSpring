@@ -4,9 +4,9 @@
     xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-   <bean id="outerBean" class="insideBean/TextEditor">
-      <property name="target">
-         <bean id="innerBean" class="insideBean/SpellChecker" />
+   <bean id="outerBean" class="insideBean.TextEditor">
+      <property name="spellChecker">
+         <bean id="innerBean" class="insideBean.SpellChecker" />
       </property>
    </bean>
 
