@@ -11,5 +11,7 @@ public class MainApp {
       HelloWorldConfig hc = ctx.getBean(HelloWorldConfig.class);
       hc.helloWorld().checkSpelling();
       
+      HelloWorld hw = ctx.getBean(HelloWorld.class);
+      hw.checkSpelling();
    }
 }

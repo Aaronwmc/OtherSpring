@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<description>Spring Quick Start</description>
+	<bean id="TheAction"
+	class="net.wmc.spring.qs.UpperAction">
+	<property name="message">
+	<value>Hello </value>
+	</property>
+	</bean>
+	
+	<bean id="hello" class="net.wmc.spring.qs.HelloAction">
+		<property name="name"><value>Alice</value></property>
+	</bean>
+	
+	<bean id="bye" class="net.wmc.spring.qs.ByeAction">
+		<property name="name"><value>Hans</value></property>
+	</bean>
+</beans>
